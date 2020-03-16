@@ -27,7 +27,7 @@ def difficulty_level_hard():
     secret = int(random.randrange(0,100))
     for i in range(guesses):
         guess = int(input('Guess a number from 1 to 100. '))
-        if i == 2:
+        if i == guesses:
             print('Game over, too many guesses.')
             play_again()
         elif guess > secret:
