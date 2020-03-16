@@ -19,7 +19,25 @@ def difficulty_level_easy():
         elif guess == secret:
             print('You win!')
             play_again()
-            
+
+def difficulty_level_hard():
+    global guesses
+    global secret
+    guesses = 3
+    secret = int(random.randrange(0,100))
+    for i in range(guesses):
+        guess = int(input('Guess a number from 1 to 100. '))
+        if i == 2:
+            print('Game over, too many guesses.')
+            play_again()
+        elif guess > secret:
+            print('Your guess is too high. Try again.')
+        elif guess < secret:
+            print('Your guess is too low. Try again.')
+        elif guess == secret:
+            print('You win!')
+            play_again()
+
 def start_game():
     global game_on
     game_on = True
