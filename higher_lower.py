@@ -30,7 +30,7 @@ def difficulty_level_hard():
             print('Game over, too many guesses.')
             break
         else: 
-        guess = int(input('Guess a number from 1 to 100. '))
+            guess = int(input('Guess a number from 1 to 100. '))
             if guess > secret:
                 print('Your guess is too high. Try again.')
             elif guess < secret:
